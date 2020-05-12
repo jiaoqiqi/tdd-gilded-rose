@@ -8,8 +8,10 @@ public class RoseTest {
 
 
     @Test
-    void should_return_1_when_given_1() {
-        assertThat("1").isEqualTo("1");
+    void should_increase_1_unit_quality_when_updating_given_AgedBrie_is_sellIn_positive() {
+        AgedBrie agedBrie = new AgedBrie(11,1);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(agedBrie).getQuality()).isEqualTo(2);
     }
 }
 
