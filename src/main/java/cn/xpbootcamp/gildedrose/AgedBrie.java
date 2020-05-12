@@ -13,10 +13,6 @@ public class AgedBrie {
         return sellIn;
     }
 
-    public void setSellIn(int sellIn) {
-        this.sellIn = sellIn;
-    }
-
     public int getQuality() {
         return quality;
     }
