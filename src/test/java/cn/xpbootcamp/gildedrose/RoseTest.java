@@ -150,5 +150,12 @@ public class RoseTest {
         Rose rose = new Rose();
         assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(0);
     }
+
+    @Test
+    void should_reset_to_50_unit_quality_when_updating_given_CommonGoods_is_quality_more_than_50() {
+        CommonGoods commonGoods = new CommonGoods(10,100);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(50);
+    }
 }
 
