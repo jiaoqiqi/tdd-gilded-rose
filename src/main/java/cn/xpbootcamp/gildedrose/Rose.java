@@ -46,11 +46,14 @@ public class Rose {
     }
 
     Goods limitQuality(Goods goods) {
-        if (goods.getQuality() > 50) {
-            goods.setQuality(50);
+        int MAX_QUALITY = 50;
+        int MIN_QUALITY = 0;
+
+        if (goods.getQuality() > MAX_QUALITY) {
+            goods.setQuality(MAX_QUALITY);
         }
-        if (goods.getQuality() < 0) {
-            goods.setQuality(0);
+        if (goods.getQuality() < MIN_QUALITY) {
+            goods.setQuality(MIN_QUALITY);
         }
         return goods;
     }
