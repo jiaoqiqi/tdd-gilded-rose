@@ -7,8 +7,6 @@ import cn.xpbootcamp.gildedrose.model.Goods;
 
 public class Rose {
     Goods refresh(Goods goods) {
-        int currentSellIn = goods.getSellIn();
-        int currentQuality = goods.getQuality();
 
         if (goods instanceof AgedBrie) {
             Goods refreshedGoods = goods.refreshQuality();
@@ -22,12 +20,9 @@ public class Rose {
             return result;
         }
         if (goods instanceof CommonGoods) {
-            if (currentSellIn > 0) {
-                goods.setQuality(currentQuality - 1);
-            }
-            if (currentSellIn <= 0) {
-                goods.setQuality(currentQuality - 2);
-            }
+            Goods refreshedGoods = goods.refreshQuality();
+            Goods result = refreshedGoods.doQualityLimitation();
+            return result;
         }
 
         Goods result = goods.doQualityLimitation();
