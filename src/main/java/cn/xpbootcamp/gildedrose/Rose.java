@@ -42,19 +42,8 @@ public class Rose {
             }
         }
 
-        return limitQuality(goods);
-    }
+        Goods result = goods.doQualityLimitation();
 
-    Goods limitQuality(Goods goods) {
-        int MAX_QUALITY = 50;
-        int MIN_QUALITY = 0;
-
-        if (goods.getQuality() > MAX_QUALITY) {
-            goods.setQuality(MAX_QUALITY);
-        }
-        if (goods.getQuality() < MIN_QUALITY) {
-            goods.setQuality(MIN_QUALITY);
-        }
-        return goods;
+        return result;
     }
 }
