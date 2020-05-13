@@ -13,5 +13,12 @@ public class RoseTest {
         Rose rose = new Rose();
         assertThat(rose.refresh(agedBrie).getQuality()).isEqualTo(2);
     }
+
+    @Test
+    void should_increase_2_unit_quality_when_updating_given_AgedBrie_is_sellIn_negative() {
+        AgedBrie agedBrie = new AgedBrie(-1,1);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(agedBrie).getQuality()).isEqualTo(3);
+    }
 }
 

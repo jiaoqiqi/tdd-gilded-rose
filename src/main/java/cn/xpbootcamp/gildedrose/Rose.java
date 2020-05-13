@@ -6,6 +6,9 @@ public class Rose {
         if (agedBrie.getSellIn() >= 0){
             agedBrie.setQuality(agedBrie.getQuality() + 1);
         }
+        if (agedBrie.getSellIn() < 0){
+            agedBrie.setQuality(agedBrie.getQuality() + 2);
+        }
         return agedBrie;
     }
 }
