@@ -94,5 +94,33 @@ public class RoseTest {
         assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(19);
     }
 
+    @Test
+    void should_reset_to_0_unit_quality_when_updating_given_BackstagePass_is_sellIn_equals_0() {
+        BackstagePass backstagePass = new BackstagePass(0,28);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(0);
+    }
+
+    @Test
+    void should_reset_to_0_unit_quality_when_updating_given_BackstagePass_is_sellIn_less_than_0() {
+        BackstagePass backstagePass = new BackstagePass(-1,28);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(0);
+    }
+
+    @Test
+    void should_reset_to_0_unit_quality_when_updating_given_BackstagePass_is_quality_less_than_0() {
+        BackstagePass backstagePass = new BackstagePass(11,-1);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(0);
+    }
+
+    @Test
+    void should_reset_to_50_unit_quality_when_updating_given_BackstagePass_is_quality_more_than_50() {
+        BackstagePass backstagePass = new BackstagePass(1,49);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(50);
+    }
+
 }
 

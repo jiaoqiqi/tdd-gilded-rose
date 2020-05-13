@@ -25,6 +25,9 @@ public class Rose {
             if (goods.getSellIn() <= 5 && goods.getSellIn() >0){
                 goods.setQuality(goods.getQuality() + 3);
             }
+            if (goods.getSellIn() <= 0){
+                goods.setQuality(0);
+            }
         }
 
         limitQuality(goods);
