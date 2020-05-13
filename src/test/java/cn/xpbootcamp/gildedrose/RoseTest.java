@@ -2,6 +2,7 @@ package cn.xpbootcamp.gildedrose;
 
 import cn.xpbootcamp.gildedrose.model.AgedBrie;
 import cn.xpbootcamp.gildedrose.model.BackstagePass;
+import cn.xpbootcamp.gildedrose.model.CommonGoods;
 import cn.xpbootcamp.gildedrose.model.Sulfuras;
 import org.junit.jupiter.api.Test;
 
@@ -122,5 +123,11 @@ public class RoseTest {
         assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(50);
     }
 
+    @Test
+    void should_decrease_1_unit_quality_when_updating_given_CommonGoods_is_sellIn_larger_than_0() {
+        CommonGoods commonGoods = new CommonGoods(5,10);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(9);
+    }
 }
 

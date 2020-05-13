@@ -2,6 +2,7 @@ package cn.xpbootcamp.gildedrose;
 
 import cn.xpbootcamp.gildedrose.model.AgedBrie;
 import cn.xpbootcamp.gildedrose.model.BackstagePass;
+import cn.xpbootcamp.gildedrose.model.CommonGoods;
 import cn.xpbootcamp.gildedrose.model.Goods;
 
 public class Rose {
@@ -30,6 +31,11 @@ public class Rose {
             }
             if (currentSellIn <= 0){
                 goods.setQuality(0);
+            }
+        }
+        if (goods instanceof CommonGoods){
+            if (currentSellIn > 0) {
+                goods.setQuality(currentQuality - 1);
             }
         }
 
