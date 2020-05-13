@@ -26,10 +26,10 @@ public class Rose {
             if (currentSellIn <= 10 && currentSellIn > 5) {
                 goods.setQuality(currentQuality + 2);
             }
-            if (currentSellIn <= 5 && currentSellIn > 0) {
+            if (currentSellIn <= 5 && currentSellIn >= 0) {
                 goods.setQuality(currentQuality + 3);
             }
-            if (currentSellIn <= 0) {
+            if (currentSellIn < 0) {
                 goods.setQuality(0);
             }
         }

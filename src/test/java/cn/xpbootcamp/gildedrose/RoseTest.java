@@ -96,10 +96,10 @@ public class RoseTest {
     }
 
     @Test
-    void should_reset_to_0_unit_quality_when_updating_given_BackstagePass_is_sellIn_equals_0() {
+    void should_increase_3_unit_quality_when_updating_given_BackstagePass_is_sellIn_equals_0() {
         BackstagePass backstagePass = new BackstagePass(0,28);
         Rose rose = new Rose();
-        assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(0);
+        assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(31);
     }
 
     @Test
