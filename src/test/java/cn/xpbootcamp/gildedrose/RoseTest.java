@@ -50,5 +50,12 @@ public class RoseTest {
         Rose rose = new Rose();
         assertThat(rose.refresh(sulfuras).getQuality()).isEqualTo(0);
     }
+
+    @Test
+    void should_return_50_quality_when_updating_given_Sulfuras_quality_is_more_than_50() {
+        Sulfuras sulfuras = new Sulfuras(-1,100);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(sulfuras).getQuality()).isEqualTo(50);
+    }
 }
 
