@@ -143,5 +143,12 @@ public class RoseTest {
         Rose rose = new Rose();
         assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(6);
     }
+
+    @Test
+    void should_reset_to_0_unit_quality_when_updating_given_CommonGoods_is_quality_less_than_0() {
+        CommonGoods commonGoods = new CommonGoods(-1,1);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(0);
+    }
 }
 
