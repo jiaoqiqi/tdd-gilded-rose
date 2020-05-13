@@ -6,26 +6,29 @@ import cn.xpbootcamp.gildedrose.model.Goods;
 
 public class Rose {
     Goods refresh(Goods goods) {
+        int currentSellIn = goods.getSellIn();
+        int currentQuality = goods.getQuality();
 
         if (goods instanceof AgedBrie) {
-            if (goods.getSellIn() >= 0) {
-                goods.setQuality(goods.getQuality() + 1);
+            if (currentSellIn >= 0) {
+                goods.setQuality(currentQuality + 1);
             }
-            if (goods.getSellIn() < 0) {
-                goods.setQuality(goods.getQuality() + 2);
+            if (currentSellIn < 0) {
+                goods.setQuality(currentQuality + 2);
             }
         }
         if (goods instanceof BackstagePass){
-            if (goods.getSellIn() > 10) {
-                goods.setQuality(goods.getQuality() + 1);
+
+            if (currentSellIn > 10) {
+                goods.setQuality(currentQuality + 1);
             }
-            if (goods.getSellIn() <=10 && goods.getSellIn() >5){
-                goods.setQuality(goods.getQuality() + 2);
+            if (currentSellIn <=10 && currentSellIn >5){
+                goods.setQuality(currentQuality + 2);
             }
-            if (goods.getSellIn() <= 5 && goods.getSellIn() >0){
-                goods.setQuality(goods.getQuality() + 3);
+            if (currentSellIn <= 5 && currentSellIn >0){
+                goods.setQuality(currentQuality+ 3);
             }
-            if (goods.getSellIn() <= 0){
+            if (currentSellIn <= 0){
                 goods.setQuality(0);
             }
         }
