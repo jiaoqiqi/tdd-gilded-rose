@@ -1,5 +1,8 @@
 ![](tasking.png)
 
+每个商品有两个属性，sellIn与quality，代表当前保质期下商品的价值
+每次调用refresh方法，代表距离过期时间近了一天。
+
 #### AgedBrie
 - Given AgedBrie is sellIn >= 0 When updating Then increase 1 unit quality
 - Given AgedBrie is sellIn < 0 When updating Then increase 2 unit quality
