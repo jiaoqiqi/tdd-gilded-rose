@@ -129,5 +129,19 @@ public class RoseTest {
         Rose rose = new Rose();
         assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(9);
     }
+
+    @Test
+    void should_decrease_3_unit_quality_when_updating_given_CommonGoods_is_sellIn_equals_0() {
+        CommonGoods commonGoods = new CommonGoods(0,10);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(8);
+    }
+
+    @Test
+    void should_decrease_2_unit_quality_when_updating_given_CommonGoods_is_sellIn_negative() {
+        CommonGoods commonGoods = new CommonGoods(-1,8);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(commonGoods).getQuality()).isEqualTo(6);
+    }
 }
 

@@ -37,6 +37,9 @@ public class Rose {
             if (currentSellIn > 0) {
                 goods.setQuality(currentQuality - 1);
             }
+            if (currentSellIn <= 0){
+                goods.setQuality(currentQuality -2);
+            }
         }
 
         limitQuality(goods);
