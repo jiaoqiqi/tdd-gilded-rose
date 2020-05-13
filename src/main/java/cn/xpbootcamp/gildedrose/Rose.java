@@ -16,8 +16,11 @@ public class Rose {
             }
         }
         if (goods instanceof BackstagePass){
-            if (goods.getSellIn() >= 10) {
+            if (goods.getSellIn() > 10) {
                 goods.setQuality(goods.getQuality() + 1);
+            }
+            if (goods.getSellIn() <=10 && goods.getSellIn() >5){
+                goods.setQuality(goods.getQuality() + 2);
             }
         }
 
