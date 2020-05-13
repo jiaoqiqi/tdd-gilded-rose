@@ -18,33 +18,31 @@ public class Rose {
                 goods.setQuality(currentQuality + 2);
             }
         }
-        if (goods instanceof BackstagePass){
+        if (goods instanceof BackstagePass) {
 
             if (currentSellIn > 10) {
                 goods.setQuality(currentQuality + 1);
             }
-            if (currentSellIn <=10 && currentSellIn >5){
+            if (currentSellIn <= 10 && currentSellIn > 5) {
                 goods.setQuality(currentQuality + 2);
             }
-            if (currentSellIn <= 5 && currentSellIn >0){
-                goods.setQuality(currentQuality+ 3);
+            if (currentSellIn <= 5 && currentSellIn > 0) {
+                goods.setQuality(currentQuality + 3);
             }
-            if (currentSellIn <= 0){
+            if (currentSellIn <= 0) {
                 goods.setQuality(0);
             }
         }
-        if (goods instanceof CommonGoods){
+        if (goods instanceof CommonGoods) {
             if (currentSellIn > 0) {
                 goods.setQuality(currentQuality - 1);
             }
-            if (currentSellIn <= 0){
-                goods.setQuality(currentQuality -2);
+            if (currentSellIn <= 0) {
+                goods.setQuality(currentQuality - 2);
             }
         }
 
-        limitQuality(goods);
-
-        return goods;
+        return limitQuality(goods);
     }
 
     Goods limitQuality(Goods goods) {
