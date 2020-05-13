@@ -1,6 +1,7 @@
 package cn.xpbootcamp.gildedrose;
 
 import cn.xpbootcamp.gildedrose.model.AgedBrie;
+import cn.xpbootcamp.gildedrose.model.Sulfuras;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -34,6 +35,13 @@ public class RoseTest {
         AgedBrie agedBrie = new AgedBrie(-1,-10);
         Rose rose = new Rose();
         assertThat(rose.refresh(agedBrie).getQuality()).isEqualTo(0);
+    }
+
+    @Test
+    void should_return_original_quality_when_updating_given_Sulfuras() {
+        Sulfuras sulfuras = new Sulfuras(-1,10);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(sulfuras).getQuality()).isEqualTo(10);
     }
 }
 
