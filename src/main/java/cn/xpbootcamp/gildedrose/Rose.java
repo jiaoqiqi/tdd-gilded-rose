@@ -1,6 +1,7 @@
 package cn.xpbootcamp.gildedrose;
 
 import cn.xpbootcamp.gildedrose.model.AgedBrie;
+import cn.xpbootcamp.gildedrose.model.BackstagePass;
 import cn.xpbootcamp.gildedrose.model.Goods;
 
 public class Rose {
@@ -12,6 +13,11 @@ public class Rose {
             }
             if (goods.getSellIn() < 0) {
                 goods.setQuality(goods.getQuality() + 2);
+            }
+        }
+        if (goods instanceof BackstagePass){
+            if (goods.getSellIn() >= 10) {
+                goods.setQuality(goods.getQuality() + 1);
             }
         }
 

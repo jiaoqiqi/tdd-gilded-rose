@@ -14,7 +14,7 @@
 #### BackstagePass
 - Given BackstagePass is sellIn >= 10 When updating Then increase 1 unit quality
 - Given BackstagePass is sellIn < 10, >=5 When updating Then increase 2 unit quality
-- Given BackstagePass is sellIn <=5 >=0 When updating Then increase 3 unit quality
+- Given BackstagePass is sellIn <5 >=0 When updating Then increase 3 unit quality
 - Given BackstagePass is sellIn <0 When updating Then return 0
 - Given BackstagePass is quality < 0 When updating Then return 0
 - Given BackstagePass is quality > 50 When updating Then return 50

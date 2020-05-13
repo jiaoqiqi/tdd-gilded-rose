@@ -1,6 +1,7 @@
 package cn.xpbootcamp.gildedrose;
 
 import cn.xpbootcamp.gildedrose.model.AgedBrie;
+import cn.xpbootcamp.gildedrose.model.BackstagePass;
 import cn.xpbootcamp.gildedrose.model.Sulfuras;
 import org.junit.jupiter.api.Test;
 
@@ -57,5 +58,13 @@ public class RoseTest {
         Rose rose = new Rose();
         assertThat(rose.refresh(sulfuras).getQuality()).isEqualTo(50);
     }
+
+    @Test
+    void should_increase_1_unit_quality_when_updating_given_BackstagePass_is_sellIn_more_than_10() {
+        BackstagePass backstagePass = new BackstagePass(11,1);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(backstagePass).getQuality()).isEqualTo(2);
+    }
+
 }
 
