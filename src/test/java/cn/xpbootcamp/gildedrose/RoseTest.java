@@ -27,5 +27,12 @@ public class RoseTest {
         Rose rose = new Rose();
         assertThat(rose.refresh(agedBrie).getQuality()).isEqualTo(50);
     }
+
+    @Test
+    void should_return_0_when_updating_given_AgedBrie_quality_is_less_than_0() {
+        AgedBrie agedBrie = new AgedBrie(-1,-10);
+        Rose rose = new Rose();
+        assertThat(rose.refresh(agedBrie).getQuality()).isEqualTo(0);
+    }
 }
 

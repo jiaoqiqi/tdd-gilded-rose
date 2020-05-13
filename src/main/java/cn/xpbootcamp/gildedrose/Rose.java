@@ -19,6 +19,9 @@ public class Rose {
         if (agedBrie.getQuality() > 50) {
             agedBrie.setQuality(50);
         }
+        if (agedBrie.getQuality() < 0) {
+            agedBrie.setQuality(0);
+        }
         return agedBrie;
     }
 }
