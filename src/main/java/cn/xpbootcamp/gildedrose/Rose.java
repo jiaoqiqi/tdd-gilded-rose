@@ -17,18 +17,9 @@ public class Rose {
         }
         if (goods instanceof BackstagePass) {
 
-            if (currentSellIn > 10) {
-                goods.setQuality(currentQuality + 1);
-            }
-            if (currentSellIn <= 10 && currentSellIn > 5) {
-                goods.setQuality(currentQuality + 2);
-            }
-            if (currentSellIn <= 5 && currentSellIn >= 0) {
-                goods.setQuality(currentQuality + 3);
-            }
-            if (currentSellIn < 0) {
-                goods.setQuality(0);
-            }
+            Goods refreshedGoods = goods.refreshQuality();
+            Goods result = refreshedGoods.doQualityLimitation();
+            return result;
         }
         if (goods instanceof CommonGoods) {
             if (currentSellIn > 0) {
