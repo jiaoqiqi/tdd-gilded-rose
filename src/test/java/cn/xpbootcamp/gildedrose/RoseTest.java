@@ -1,5 +1,6 @@
 package cn.xpbootcamp.gildedrose;
 
+import cn.xpbootcamp.gildedrose.model.AgedBrie;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

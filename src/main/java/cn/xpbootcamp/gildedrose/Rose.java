@@ -1,27 +1,29 @@
 package cn.xpbootcamp.gildedrose;
 
+import cn.xpbootcamp.gildedrose.model.Goods;
+
 public class Rose {
-    AgedBrie refresh(AgedBrie agedBrie) {
+    Goods refresh(Goods goods) {
 
-        if (agedBrie.getSellIn() >= 0) {
-            agedBrie.setQuality(agedBrie.getQuality() + 1);
+        if (goods.getSellIn() >= 0) {
+            goods.setQuality(goods.getQuality() + 1);
         }
-        if (agedBrie.getSellIn() < 0) {
-            agedBrie.setQuality(agedBrie.getQuality() + 2);
+        if (goods.getSellIn() < 0) {
+            goods.setQuality(goods.getQuality() + 2);
         }
 
-        limitQuality(agedBrie);
+        limitQuality(goods);
 
-        return agedBrie;
+        return goods;
     }
 
-    AgedBrie limitQuality(AgedBrie agedBrie) {
-        if (agedBrie.getQuality() > 50) {
-            agedBrie.setQuality(50);
+    Goods limitQuality(Goods goods) {
+        if (goods.getQuality() > 50) {
+            goods.setQuality(50);
         }
-        if (agedBrie.getQuality() < 0) {
-            agedBrie.setQuality(0);
+        if (goods.getQuality() < 0) {
+            goods.setQuality(0);
         }
-        return agedBrie;
+        return goods;
     }
 }
