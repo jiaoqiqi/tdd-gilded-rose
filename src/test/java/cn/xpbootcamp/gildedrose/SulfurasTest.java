@@ -31,4 +31,12 @@ public class SulfurasTest {
         assertThat(updatedAgedBrie.getQuality()).isEqualTo(50);
     }
 
+    @Test
+    void should_sellIn_minus_1_quality_minus_1_when_one_day_passed_given_sellIn_minus_minus_1_quality_1() {
+        Sulfuras sulfuras = new Sulfuras(-1,50);
+        Goods updatedAgedBrie = sulfuras.refreshQuality();
+        assertThat(updatedAgedBrie.getSellIn()).isEqualTo(-1);
+        assertThat(updatedAgedBrie.getQuality()).isEqualTo(50);
+    }
+
 }
