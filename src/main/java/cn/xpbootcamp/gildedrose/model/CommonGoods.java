@@ -14,6 +14,6 @@ public class CommonGoods extends Goods{
         if (currentSellIn > 0) nextQuality = currentQuality - 1;
         if (currentSellIn <= 0) nextQuality = currentQuality - 2;
 
-        return new CommonGoods(currentSellIn - 1, nextQuality);
+        return new Goods(currentSellIn - 1, nextQuality).doQualityLimitation();
     }
 }
