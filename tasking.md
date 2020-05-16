@@ -16,7 +16,7 @@ Given Sulfuras is sellIn=-2 quality=1 When one day passed Then updatedSellIn=-2 
 Given BackstagePass is sellIn=15 quality=20 When one day passed Then updatedSellIn=14 updatedQuality=21
 Given BackstagePass is sellIn=10 quality=45 When one day passed Then updatedSellIn=9 updatedQuality=47
 Given BackstagePass is sellIn=9 quality=45 When one day passed Then updatedSellIn=8 updatedQuality=47
-Given BackstagePass is sellIn=10 quality=49 When one day passed Then updatedSellIn=8 updatedQuality=50
+Given BackstagePass is sellIn=9 quality=49 When one day passed Then updatedSellIn=8 updatedQuality=50
 Given BackstagePass is sellIn=10 quality=50 When one day passed Then updatedSellIn=8 updatedQuality=50
 Given BackstagePass is sellIn=5 quality=49 When one day passed Then updatedSellIn=4 updatedQuality=50
 Given BackstagePass is sellIn=5 quality=45 When one day passed Then updatedSellIn=4 updatedQuality=48
