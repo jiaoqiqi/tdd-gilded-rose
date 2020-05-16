@@ -15,4 +15,11 @@ public class CommonGoodsTest {
         assertThat(updatedAgedBrie.getSellIn()).isEqualTo(9);
         assertThat(updatedAgedBrie.getQuality()).isEqualTo(19);
     }
+    @Test
+    void should_sellIn_minus_2_quality_4_when_one_day_passed_given_sellIn_minus_1_quality_6() {
+        CommonGoods commonGoods = new CommonGoods(-1,6);
+        Goods updatedAgedBrie = commonGoods.refreshQuality();
+        assertThat(updatedAgedBrie.getSellIn()).isEqualTo(-2);
+        assertThat(updatedAgedBrie.getQuality()).isEqualTo(4);
+    }
 }
