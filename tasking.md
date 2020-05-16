@@ -17,7 +17,7 @@ Given BackstagePass is sellIn=15 quality=20 When one day passed Then updatedSell
 Given BackstagePass is sellIn=10 quality=45 When one day passed Then updatedSellIn=9 updatedQuality=47
 Given BackstagePass is sellIn=9 quality=45 When one day passed Then updatedSellIn=8 updatedQuality=47
 Given BackstagePass is sellIn=9 quality=49 When one day passed Then updatedSellIn=8 updatedQuality=50
-Given BackstagePass is sellIn=10 quality=50 When one day passed Then updatedSellIn=8 updatedQuality=50
+Given BackstagePass is sellIn=9 quality=50 When one day passed Then updatedSellIn=8 updatedQuality=50
 Given BackstagePass is sellIn=5 quality=49 When one day passed Then updatedSellIn=4 updatedQuality=50
 Given BackstagePass is sellIn=5 quality=45 When one day passed Then updatedSellIn=4 updatedQuality=48
 Given BackstagePass is sellIn=1 quality=10 When one day passed Then updatedSellIn=0 updatedQuality=23
