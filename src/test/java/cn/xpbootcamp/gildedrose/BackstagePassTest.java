@@ -56,4 +56,12 @@ public class BackstagePassTest {
         assertThat(updatedAgedBrie.getQuality()).isEqualTo(50);
     }
 
+    @Test
+    void should_sellIn_4_quality_48_when_one_day_passed_given_sellIn_5_quality_45() {
+        BackstagePass backstagePass = new BackstagePass(5,45);
+        Goods updatedAgedBrie = backstagePass.refreshQuality();
+        assertThat(updatedAgedBrie.getSellIn()).isEqualTo(4);
+        assertThat(updatedAgedBrie.getQuality()).isEqualTo(48);
+    }
+
 }
