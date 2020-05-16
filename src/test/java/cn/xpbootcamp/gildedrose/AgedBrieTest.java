@@ -30,4 +30,11 @@ public class AgedBrieTest {
         assertThat(updatedAgedBrie.getSellIn()).isEqualTo(1);
         assertThat(updatedAgedBrie.getQuality()).isEqualTo(50);
     }
+    @Test
+    void should_sellIn_1_quality_22_when_one_day_passed_given_sellIn_0_quality_20() {
+        AgedBrie agedBrie = new AgedBrie(0,20);
+        Goods updatedAgedBrie = agedBrie.refreshQuality();
+        assertThat(updatedAgedBrie.getSellIn()).isEqualTo(-1);
+        assertThat(updatedAgedBrie.getQuality()).isEqualTo(22);
+    }
 }
