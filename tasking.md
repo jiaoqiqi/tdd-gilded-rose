@@ -20,7 +20,7 @@ Given BackstagePass is sellIn=9 quality=49 When one day passed Then updatedSellI
 Given BackstagePass is sellIn=9 quality=50 When one day passed Then updatedSellIn=8 updatedQuality=50
 Given BackstagePass is sellIn=5 quality=49 When one day passed Then updatedSellIn=4 updatedQuality=50
 Given BackstagePass is sellIn=5 quality=45 When one day passed Then updatedSellIn=4 updatedQuality=48
-Given BackstagePass is sellIn=1 quality=10 When one day passed Then updatedSellIn=0 updatedQuality=23
+Given BackstagePass is sellIn=1 quality=10 When one day passed Then updatedSellIn=0 updatedQuality=1ß3
 Given BackstagePass is sellIn=0 quality=20 When one day passed Then updatedSellIn=-1 updatedQuality=0
 
 #### CommonGoods
